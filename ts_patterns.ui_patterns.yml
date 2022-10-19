@@ -1,4 +1,4 @@
-card:
+card-md:
   label: Card
   description: Display a card
   variants:
