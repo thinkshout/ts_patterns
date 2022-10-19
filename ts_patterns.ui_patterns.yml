@@ -34,3 +34,47 @@ card-md:
       label: text
       description: A single tag
       preview: Category 1
+section-title-link:
+  label: Section, Title, Link
+  description: A section with a title and link
+  variants:
+    default:
+      label: 2-up
+      description: 2-up display
+    white:
+      label: White background
+      description: Default
+    grey:
+      label: Grey background
+      description: Grey variant
+    three-up:
+      label: 3-up
+      description: 3-up display
+  fields:
+    title:
+      type: text
+      label: Title
+      description: Title string
+      preview: Cart header
+    intro:
+      type: text
+      label: Intro
+      description: Intro.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio consectetur in massa.
+    link_url:
+      type: text
+      label: Link URL
+      preview: https://thinkshout.com
+    link_text:
+      type: text
+      label: Link text
+      preview: Click here
+    block_class:
+      type: text
+      label: Block class
+      preview: sample--2-up
+    bg_color:
+      type: text
+      label: BG color
+      description: The background color
+      preview: ts-bg-white
