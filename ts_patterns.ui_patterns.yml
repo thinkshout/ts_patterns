@@ -41,9 +41,6 @@ section-title-link:
     default:
       label: 2-up
       description: 2-up display
-    white:
-      label: White background
-      description: Default
     grey:
       label: Grey background
       description: Grey variant
