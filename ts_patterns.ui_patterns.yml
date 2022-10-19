@@ -15,8 +15,7 @@ card-md:
       type: text
       label: Text
       description: Card Text.
-      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio
-      consectetur in massa.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio consectetur in massa.
     date:
       type: text
       label: Date
