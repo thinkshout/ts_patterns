@@ -41,6 +41,9 @@ section-title-link:
     default:
       label: 2-up
       description: 2-up display
+    no-link:
+      label: No Link
+      description: Removes the header link
     grey:
       label: Grey background
       description: Grey variant

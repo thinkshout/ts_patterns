@@ -12,6 +12,9 @@
 {% if variant == 'three-up' %}
   {% set block_class = "sample--3-up" %}
 {% endif %}
+{% if variant == 'no-link' %}
+  {% set show_link = 0 %}
+{% endif %}
 
 {% if my_attributes is empty %}
   {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
