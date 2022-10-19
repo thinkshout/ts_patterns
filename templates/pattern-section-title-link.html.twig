@@ -9,6 +9,9 @@
 {% if variant == 'grey' %}
   {% set bg_color = "ts-bg-grey-800 py-2xl" %}
 {% endif %}
+{% if variant == 'three-up' %}
+  {% set block_class = "sample--3-up" %}
+{% endif %}
 
 {% if my_attributes is empty %}
   {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
