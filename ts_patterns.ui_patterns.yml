@@ -1,0 +1,37 @@
+card:
+  label: Card
+  description: Display a card
+  variants:
+    default:
+      label: Default
+      description: A simple card
+  fields:
+    header:
+      type: text
+      label: Header
+      description: Header string
+      preview: Cart header
+    text:
+      type: text
+      label: Text
+      description: Card Text.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio
+      consectetur in massa.
+    date:
+      type: text
+      label: Date
+      description: Date string.
+      preview: July 28 — August 1, 2021
+    published:
+      type: text
+      label: Published date
+      preview: August 1
+    author:
+      type: text
+      label: Author Name
+      preview: Author Name
+    tag:
+      type: text
+      label: text
+      description: A single tag
+      preview: Category 1

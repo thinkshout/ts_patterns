@@ -1,6 +1,6 @@
 {
     "name": "thinkshout/ts_patterns",
     "description": "UI patterns for use with ts_pattern_library.",
-    "type": "library",
+    "type": "drupal-module",
     "require": {}
 }
