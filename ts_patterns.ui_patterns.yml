@@ -10,7 +10,7 @@ card-md:
       type: text
       label: Header
       description: Header string
-      preview: Cart header
+      preview: Card header
     text:
       type: text
       label: Text
@@ -55,7 +55,7 @@ section-title-link:
       type: text
       label: Title
       description: Title string
-      preview: Cart header
+      preview: Section header
     intro:
       type: text
       label: Intro
