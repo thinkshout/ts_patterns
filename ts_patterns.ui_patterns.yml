@@ -1,25 +1,13 @@
-btn-primary:
-  label: btn-primary
-  description: button primary description
+buttons:
+  label: buttons
+  description: All buttons
   variants:
     default:
-      label: Default
-      description: pill button with color fade on hover/focus
-  fields:
-    link_url:
-      type: text
-      label: Link URL
-      preview: https://thinkshout.com
-    link_text:
-      type: text
-      label: Link text
-      preview: Optional link
-btn-wayfinding:
-  label: btn-wayfinding
-  description: A text button with a chevron pointing right
-  variants:
-    default:
-      label: Default
+      label: Primary
+      description: A simple button
+    wayfinding:
+      label: Wayfinding
+      description: A text button with a chevron pointing right
   fields:
     link_url:
       type: text
