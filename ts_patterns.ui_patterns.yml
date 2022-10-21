@@ -1,5 +1,5 @@
 buttons:
-  label: buttons
+  label: Buttons
   description: All buttons
   variants:
     default:
@@ -16,7 +16,7 @@ buttons:
     link_text:
       type: text
       label: Link text
-      preview: btn-wayfinding
+      preview: Button
 card-md:
   label: Card
   description: Display a card

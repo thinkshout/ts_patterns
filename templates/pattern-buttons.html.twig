@@ -4,6 +4,6 @@
 
  {% include '@ts_patterns/assets/btns/btn-' ~ variant ~ '.html.twig' with {
      link_url:link_url,
-     link_text:link_text,
+     link_text:link_text ~ ' ' ~ variant,
      link_attributes:link_attributes
  } %}
