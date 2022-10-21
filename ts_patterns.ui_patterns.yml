@@ -1,22 +1,3 @@
-buttons:
-  label: Buttons
-  description: All buttons
-  variants:
-    default:
-      label: Primary
-      description: A simple button
-    wayfinding:
-      label: Wayfinding
-      description: A text button with a chevron pointing right
-  fields:
-    link_url:
-      type: text
-      label: Link URL
-      preview: https://thinkshout.com
-    link_text:
-      type: text
-      label: Link text
-      preview: Button
 card-md:
   label: Card
   description: Display a card
