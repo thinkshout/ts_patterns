@@ -7,10 +7,13 @@ buttons:
           component:
             ../../assets/btns/btn-wayfinding/btn-wayfinding.css: { }
   variants:
-    default:
+    btn-primary:
       label: Primary
       description: A simple button
-    wayfinding:
+    btn-outline:
+      label: Outline
+      description: A simple outlined button
+    btn-wayfinding:
       label: Wayfinding
       description: A text button with a chevron pointing right
   fields:
