@@ -1,12 +1,10 @@
-{# Wayfinding btn
- * A text link with arrow right.
+{# Buttons
+ * Displays the template of the variant selected.
 #}
 
 {{ attach_library('ts_motif/ts_btn_wayfinding') }}
 
-{% set btn_name = 'btn-' ~ variant %}
-
- {% include '@ts_patterns/assets/btns/' ~ btn_name ~ '/' ~ btn_name ~ '.html.twig' with {
+ {% include '@ts_patterns/assets/btns/' ~ variant ~ '/' ~ variant ~ '.html.twig' with {
      link_url:link_url,
      link_text:link_text ~ ' ' ~ variant,
      link_attributes:link_attributes

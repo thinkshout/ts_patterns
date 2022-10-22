@@ -1,0 +1,18 @@
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{% set link_attributes = link_attributes %}
+{% set link_classes =
+  "btn-outline
+  border-2
+  border-action
+  font-bold
+  inline-block
+  px-md
+  py-md
+  hover:bg-action
+  focus:bg-action
+  rounded-md
+  text-action"
+%}
+
+<a href="{{ link_url }}" class="{{ link_classes }}">{{ link_text }}</a>
