@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Card sm.
+ * title link.
+ *
+ */
+#}
+
+{# Sets default value for link variable #}
+{# TODO: remove default values in production #}
+{% set link_title = link_title|default('Header: Card sm') %}
+{% set link_url = link_url|default('/') %}
+
+{# Template #}
+<div class="ts-card-sm">
+  <h3 class="headline-sm text-high-contrast"><a href="{{ link_url }}">{{ link_title }}</a></h3>
+</div>

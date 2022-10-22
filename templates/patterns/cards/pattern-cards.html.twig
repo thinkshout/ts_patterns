@@ -1,0 +1,8 @@
+{# Cards
+ * Displays the card template of the variant selected.
+#}
+
+ {% include '@ts_patterns/assets/cards/' ~ variant ~ '.html.twig' with {
+   link_url:link_url,
+   link_text:link_text ~ ' ' ~ variant,
+ } %}
