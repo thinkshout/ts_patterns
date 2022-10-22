@@ -2,44 +2,18 @@
 {% set intro = intro %}
 {% set link_url = link_url %}
 {% set link_text = link_text %}
-{% set show_link = show_link ? show_link : (link_url ? 1 : 0)  %}
-{% set link_attributes = link_attributes %}
-{% set block_class = block_class %}
-{% set bg_color = bg_color ? bg_color : "ts-bg-white" %}
-{% if variant == 'reversed' %}
-  {% set bg_color = "ts-bg-grey-800 py-2xl" %}
-{% endif %}
-{% if variant == 'three-up' %}
-  {% set block_class = "sample--3-up" %}
-  {% set grid_class = "ts-grid-col-3" %}
-{% elseif variant == 'four-up' %}
-  {% set grid_class = "ts-grid-col-4" %}
-{% else %}
-  {% set grid_class = "ts-grid-col-2" %}
-{% endif %}
-{% if variant == 'no-link' %}
-  {% set show_link = 0 %}
-{% endif %}
 
-{% if my_attributes is empty %}
-  {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
-{% endif %}
+{% include '@ts_patterns/assets/blocks/x-up-cards/x-up-cards.html.twig' with {
+  grid_class:grid_class,
+  title:title,
+  intro:intro,
+  link_url:link_url,
+  link_text:link_text,
+  show_link:show_link,
+  bg_color:bg_color,
+} %}
 
-{% set classes = [
-  block_class,
-  bg_color,
-  'ts-reveal',
-  'ts-friendly',
-] %}
-
-<div {{ my_attributes.addClass(classes) }}>
-  <div class="lg:container p-site">
-    {{ pattern_preview('section-title-link', 'default') }}
-    <div class="{{ grid_class }}">
-      {{ pattern_preview('cards', 'card-md') }}
-      {{ pattern_preview('cards', 'card-md') }}
-      {{ pattern_preview('cards', 'card-md') }}
-      {{ pattern_preview('cards', 'card-md') }}
-    </div>
-  </div>
-</div>
+<a href="https://github.com/thinkshout/ts_patterns/tree/main/templates/blocks/x-up-cards"
+   class="btn--copy-template mt-lg" target="_blank">
+  {% trans %}Get the code for X-Up Cards{% endtrans %}
+</a>
