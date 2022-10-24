@@ -11,6 +11,14 @@ card-md:
       label: Header
       description: Header string
       preview: Card header
+    image:
+      type: text
+      label: Image
+      description: The sample image
+      preview:
+        theme: image
+        uri: modules/contrib/ts_patterns/images/1500.png
+        alt: A test image
     text:
       type: text
       label: Text
