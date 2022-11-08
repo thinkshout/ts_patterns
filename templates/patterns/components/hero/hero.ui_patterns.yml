@@ -1,0 +1,57 @@
+hero:
+  label: Page Hero
+  description: Appears at the top of the page, can include image, H1, text, buttons and breadcrumbs.
+  variants:
+    hero--basic:
+      label: Basic
+      description: breadcrumb, h1, configurable color, svg
+    hero--fancy:
+      label: Fancy
+      description: breadcrumb, h1, text, up to 2 buttons, configurable color, svg
+    hero--basic-alt:
+      label: Basic alt
+      description: Alternative display for Basic Hero
+    hero--fancy-alt:
+      label: Fancy alt
+      description: Alternative display for Fancy Hero
+  fields:
+    breadcrumb:
+      type: text
+      label: Header
+      description: breadcrumb
+      preview: Home/Learn
+    tag:
+      type: text
+      label: Tag
+      description: Title string, goes immediately before or after header (h1).
+      preview: More info
+    header:
+      type: text
+      label: Header
+      description: Title string
+      preview: Hero header
+    text:
+      type: text
+      label: Text
+      description: Short text.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio consectetur in massa.
+    link_url:
+      type: text
+      label: Link URL
+      preview: https://thinkshout.com
+    link_text:
+      type: text
+      label: Link text
+      preview: Optional link
+    link_url_2:
+      type: text
+      label: Link URL
+      preview: https://thinkshout.com
+    link_text_2:
+      type: text
+      label: Link text
+      preview: Optional link
+    ts_bg_color:
+      type: select
+      label: Background color
+      preview: ts-bg-grey-800

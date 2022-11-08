@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Hero Basic.
+ *
+ * A short color bar hero style with text on left and svg on right.
+ *
+ * See stable templates/content.node.html.twig for full docs.
+ * @see template_preprocess_node()
+ *
+ */
+#}
+{# VARIABLES #}
+{% set breadcrumb = breadcrumb %}
+{% set header = header %}
+{% set img = img %}
+{% set ts_bg_color = ts_bg_color %}
+{% set textStyle = "utility-lg" %}
+
+{% set classes = [
+  'hero--basic-'~ pgType,
+  ts_bg_color,
+]
+%}
+
+<div{{ attributes.addClass( classes ) }}>
+  <div class="p-site py-lg xl:container">
+    <div class="w-2/3 xl:w-1/2">
+      <div class="h6 mb-sm text-md-contrast">{{ breadcrumb }}</div>
+      <h1 class="h1 mb-lg text-high-contrast">{{ header }}</h1>
+    </div>
+  </div>
+</div>
+

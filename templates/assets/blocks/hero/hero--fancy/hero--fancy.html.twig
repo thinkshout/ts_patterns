@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Hero Basic.
+ *
+ * A short color bar hero style with text on left and svg on right.
+ *
+ * See stable templates/content.node.html.twig for full docs.
+ * @see template_preprocess_node()
+ *
+ */
+#}
+
+{# @TODO: add if statements around fields that are optional #}
+{# VARIABLES #}
+{% set tag = tag %}
+{% set header = header %}
+{% set img = img %}
+{% set text = text %}
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{% set link_text_2 = link_text_2 %}
+{% set link_url_2 = link_url_2 %}
+{% set ts_bg_color = ts_bg_color %}
+
+{% set classes = [
+  'hero--fancy-'~ pgType,
+  ts_bg_color,
+]
+%}
+
+<div{{ attributes.addClass( classes ) }}>
+  <div class="p-site py-lg xl:container">
+    <div class="w-2/3 xl:w-1/2 text-high-contrast">
+      {# Main Column #}
+      <div>
+        <div class="text-md-contrast h4 mb-sm">{{ tag }}</div>
+        <h1 class="h1 mb-lg">{{ header }}</h1>
+        <div class="body">{{ text }}</div>
+        {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
+          link_text: link_text,
+          link_url: link_url,
+          link_classes: 'inline-block mr-sm'
+        } %}
+        {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
+          link_text_2: link_text_2,
+          link_url_2: link_url_2,
+          link_classes: 'inline-block'
+        } %}
+      </div>
+    </div>
+    <div> {# Right Column #}
+      {% if img.0 %}
+        <div class="">
+          {{ img }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+

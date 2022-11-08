@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Hero Fancy (alternative style).
+ *
+ * A short color bar hero style with text on left and svg on right.
+ *
+ * See stable templates/content.node.html.twig for full docs.
+ * @see template_preprocess_node()
+ *
+ */
+#}
+
+{# @TODO: add if statements around fields that are optional #}
+{# VARIABLES #}
+{% set pre_header = pre_header %}
+{% set header = header %}
+{% set img = img %}
+{% set text = text %}
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{% set link_text_2 = link_text_2 %}
+{% set link_url_2 = link_url_2 %}
+{% set ts_bg_color = ts_bg_color %}
+
+{% set classes = [
+  'hero--fancy-alt'~ pgType,
+  ts_bg_color,
+]
+%}
+
+<div{{ attributes.addClass( classes ) }}>
+  <div class="p-site py-lg xl:container">
+    <div class="w-2/3 xl:w-1/2">
+      {# Main Column #}
+      <div>
+        {% include "@ts_patterns/assets/btns/btn-back/btn-back.html.twig" with {
+          back_link_url:back_link_url,
+          back_link_text: "Back to Learn"|t
+        } %}
+        <h1 class="h3 mb-lg text-high-contrast">{{ header }}</h1>
+        <div class="body text-md-contrast">{{ text }}</div>
+        <div class="h6 mb-sm text-accent">{{ tag }}</div>
+      </div>
+    </div>
+  {# @TODO: add image #}
+  </div>
+</div>
+

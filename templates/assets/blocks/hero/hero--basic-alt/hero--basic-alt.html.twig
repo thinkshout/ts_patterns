@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Hero Basic (alternative style).
+ *
+ * A short color bar hero style with text on left and svg on right.
+ *
+ * See stable templates/content.node.html.twig for full docs.
+ * @see template_preprocess_node()
+ *
+ */
+#}
+{# VARIABLES #}
+{% set breadcrumb = breadcrumb %}
+{% set header = header %}
+{% set tag = tag %}
+{% set ts_bg_color = 'ts-bg-grey-300' %}
+
+{% set classes = [
+  'hero--basic-alt-'~ pgType,
+  ts_bg_color,
+]
+%}
+
+<div{{ attributes.addClass( classes ) }}>
+  <div class="p-site py-lg xl:container">
+    <div class="w-2/3 xl:w-1/2">
+      {# Main Column #}
+      <div>
+        {% include "@ts_patterns/assets/btns/btn-back/btn-back.html.twig" with {
+          back_link_url:back_link_url,
+          back_link_text: "Back to Learn"|t
+        } %}
+        <h1 class="h1 mb-lg text-high-contrast">{{ header }}</h1>
+        <div class="h6 mb-sm text-med-contrast ">{{ tag }}</div>
+      </div>
+    </div>
+    <div> {# Right Column #}
+      {% if img.0 %}
+        <div class="">
+          {{ img }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+

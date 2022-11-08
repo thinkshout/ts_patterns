@@ -1,0 +1,43 @@
+{# Back button #}
+
+{% if my_attributes is empty %}
+  {% set my_attributes = link_attributes ? create_attribute(link_attributes) : create_attribute() %}
+{% endif %}
+
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{% set link_attributes = link_attributes %}
+{% set link_svg_name = "back" %}
+{% set link_svg_classes = "inline-block ts-fill-action" %}
+{% set link_classes =
+  "btn-back
+  font-bold
+  inline-block
+  hover:underline
+  focus:underline
+  text-action
+ "
+%}
+
+{# anchor or button -- checks to see if link_url is set #}
+<a {{ my_attributes.addClass(link_classes).setAttribute('href',link_url).setAttribute('aria-label',link_aria_label)
+  .setAttribute('title',link_aria_label)
+}} {{ link_disabled }}>
+
+    {# SVG #}
+    {% block svg %}
+      {% if link_svg_name is not empty %}
+        <span class="btn-svg {{ link_svg_classes }}">
+        {% include '@ts_motif/_includes/svg-icon-embed.html.twig' with { svg_name: link_svg_name } %}
+       </span>
+      {% endif %}
+    {% endblock %}
+
+    {# Content #}
+    {% block content %}
+      <div class="inline-block">
+        {{ link_text }}
+      </div>
+    {% endblock %}
+
+</a>
