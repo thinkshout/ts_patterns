@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Card md.
+ * title link.
+ *
+ */
+#}
+
+{# Sets default value for link variable #}
+{# TODO: remove default values in production #}
+{% set header = header %}
+{% set link_url = link_url %}
+{% set text = text %}
+
+{# Template #}
+<div class="ts-card-md text-high-contrast">
+  {# TODO: replace placeholder image with actual image.#}
+  <div class="bg-grey-lt h-3xl"></div>
+  <h3 class="headline-sm text-high-contrast"><a href="{{ link_url }}">{{ header }}</a></h3>
+</div>

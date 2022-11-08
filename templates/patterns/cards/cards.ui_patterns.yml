@@ -1,0 +1,21 @@
+cards:
+  label: Cards
+  description: Card styles from xs to xl.
+  variants:
+    card-sm:
+      label: card-sm
+      description: card sm includes title
+    card-md:
+      label: card-md
+      description: card md includes image and title
+  fields:
+    header:
+      type: text
+      label: Header
+      description: Header string
+      preview: Card header
+    text:
+      type: text
+      label: Text
+      description: Card Text.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio consectetur in massa.

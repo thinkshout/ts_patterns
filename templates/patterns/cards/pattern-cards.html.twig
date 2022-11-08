@@ -1,0 +1,14 @@
+{# Cards
+ * Displays the card template of the variant selected.
+#}
+
+ {% include '@ts_patterns/assets/cards/' ~ variant ~ '.html.twig' with {
+   link_url:link_url,
+   link_text:link_text ~ ' ' ~ variant,
+ } %}
+
+
+<a href="https://github.com/thinkshout/ts_patterns/tree/main/templates/assets/cards/{{ variant }}"
+   class="btn--copy-template mt-lg" target="_blank">
+  {% trans %}Get the code for {{ variant }}{% endtrans %}
+</a>
