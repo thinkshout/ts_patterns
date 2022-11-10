@@ -1,0 +1,19 @@
+{# Poster
+ * Displays large call to action of the variant selected.
+#}
+
+{% include '@ts_patterns/assets/blocks/poster/' ~ variant ~ '/' ~ variant ~ '.html.twig' with {
+  header:header,
+  text:text,
+  link_url:link_url,
+  link_text:link_text ~ ' ' ~ variant,
+  link_url_2:link_url,
+  link_text_2:link_text ~ ' ' ~ variant,
+  ts_bg_color:ts_bg_color,
+} %}
+
+
+<a href="https://github.com/thinkshout/ts_patterns/tree/main/templates/assets/blocks/poster/{{ variant }}"
+   class="btn--copy-template mt-lg" target="_blank">
+  {% trans %}Get the code for {{ variant }}{% endtrans %}
+</a>

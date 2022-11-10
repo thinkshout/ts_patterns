@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Poster, left aligned image.
+ *
+ * A full width call to action.
+ *
+ */
+#}
+{# VARIABLES #}
+{% set tag = tag %}
+{% set header = header %}
+{% set text = text %}
+{% set link_url = link_url %}
+{% set link_text = link_text %}
+{% set link_url_2 = link_url_2 %}
+{% set link_text_2 = link_text_2 %}
+{% set img = img %}
+{% set ts_bg_color = ts_bg_color ?? "ts-bg-white "%}
+
+{% set classes = [
+  'component-poster',
+  ts_bg_color,
+]
+%}
+
+<div{{ attributes.addClass( classes ) }}>
+  <div class="xl:container">
+    <div class="flex">
+      <div class="p-site flex flex-col items-center">
+        <div class="pt-2xl pb-md md:py-2xl md:pr-md">
+          <div class="hidden md:block h6 mb-sm text-accent">{{ tag }}</div>
+          <h2 class="h2 mb-0 text-high-contrast">{{ header }}</h2>
+          <div class="body mb-base text-high-contrast">{{ text }}</div>
+          {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
+            link_text: link_text,
+            link_url: link_url,
+            link_classes: "mr-md",
+          } %}
+          {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
+            link_text: link_text_2,
+            link_url: link_url_2,
+          } %}
+        </div>
+      </div>
+      <div class="bg-grey-400 w-full h-[500px]"></div>
+    </div>
+  </div>
+</div>
