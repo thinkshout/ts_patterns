@@ -9,15 +9,15 @@
 {% set link_attributes = link_attributes %}
 {% set link_svg_name = "back" %}
 {% set link_svg_classes = "inline-block ts-fill-action" %}
-{% set link_classes =
+{% set evergreen_classes =
   "btn-back
   font-bold
+  font-font-family-sans
   inline-block
-  hover:underline
-  focus:underline
   text-action
  "
 %}
+{% set link_classes = link_classes ? evergreen_classes ~ ' ' ~ link_classes : evergreen_classes  %}
 
 {# anchor or button -- checks to see if link_url is set #}
 <a {{ my_attributes.addClass(link_classes).setAttribute('href',link_url).setAttribute('aria-label',link_aria_label)

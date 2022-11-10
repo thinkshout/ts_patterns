@@ -6,16 +6,16 @@
 <div class="ts-pattern">
  {% include '@ts_patterns/assets/btns/' ~ variant ~ '/' ~ variant ~ '.html.twig' with {
      link_url:link_url,
-     link_text:link_text ~ ' ' ~ variant,
+     link_text:link_text,
      link_attributes:link_attributes
  } %}
 </div>
 
-<div class="ts-pattern-code mt-lg px-md py-lg ts-bg-grey-800 text-white">
+{#<div class="ts-pattern-code mt-lg px-md py-lg ts-bg-grey-800 text-white">#}
 
-</div>
+{#</div>#}
 
-<p class="bg-[#ededed] inline-block text-action">
+<p class="bg-[#ededed] inline-block mt-md text-action">
   <a href="https://github.com/thinkshout/ts_patterns/tree/main/templates/assets/btns/{{ variant }}"
      class="btn--copy-template" target="_blank">
     {% trans %}Get the code for {{ variant }}{% endtrans %}

@@ -1,18 +1,19 @@
 {% set link_text = link_text %}
 {% set link_url = link_url %}
 {% set link_attributes = link_attributes %}
-{% set link_classes =
+{% set evergreen_classes =
   "btn-outline
   border-2
-  border-action
+  border-blue-400
   font-bold
   inline-block
-  px-md
-  py-md
-  hover:bg-action
-  focus:bg-action
+  px-sm
+  py-xs
+  hover:bg-blue-100
+  focus:bg-blue-100
   rounded-md
-  text-action"
+  text-blue-400"
 %}
+{% set link_classes = link_classes ? evergreen_classes ~ ' ' ~ link_classes : evergreen_classes  %}
 
 <a href="{{ link_url }}" class="{{ link_classes }}">{{ link_text }}</a>

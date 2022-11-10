@@ -1,17 +1,23 @@
 {% set link_text = link_text %}
 {% set link_url = link_url %}
 {% set link_attributes = link_attributes %}
-{% set link_classes =
+{% set evergreen_classes =
   "btn-primary
   font-bold
+  font-font-family-sans
   inline-block
-  px-md
-  py-md
-  hover:bg-grey-lt
-  focus:bg-grey-lt
+  px-sm
+  py-xs
+  ease-in-out duration-300
+  hover:bg-blue-900
+  focus:bg-blue-900
+  hover:text-white
+  focus:text-white
   rounded-md
   text-white
-  ts-bg-action"
+  ts-bg-blue-100
+  text-black"
 %}
+{% set link_classes = link_classes ? evergreen_classes ~ ' ' ~ link_classes : evergreen_classes  %}
 
 {% include "@ts_motif/_includes/btns/link-base.html.twig" %}

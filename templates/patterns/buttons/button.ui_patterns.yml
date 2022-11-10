@@ -1,6 +1,6 @@
 buttons:
   label: Buttons
-  description: All buttons
+  description: Buttons, text links and icon links. All buttons require the link-base twig file.
   libraries:
     - ts_btn_wayfinding:
         css:
@@ -13,9 +13,9 @@ buttons:
     btn-outline:
       label: Outline
       description: A simple outlined button
-    btn-wayfinding:
-      label: Wayfinding
-      description: A text button with a chevron pointing right
+    btn-back:
+      label: Back
+      description: A text button with a round icon pointing left
   fields:
     link_url:
       type: text
