@@ -1,16 +1,16 @@
-section-title-link:
-  label: Section header
-  description: Section header and optional link
+wayfinding-cards:
+  label: Wayfinding Cards
+  description: A 3 column grid displaying cards. Includes "section title" and "Card md" components
   variants:
     default:
-      label: default
-      description: default
+      label: 3-up
+      description: 3 cards wide
   fields:
     title:
       type: text
       label: Title
       description: Title string
-      preview: Section header
+      preview: Card header
     intro:
       type: text
       label: Intro
@@ -24,3 +24,12 @@ section-title-link:
       type: text
       label: Link text
       preview: Optional link
+    block_class:
+      type: text
+      label: Block class
+      preview: sample--2-up
+    style:
+      type: text
+      label: Style
+      description: bg color style options
+      preview: ts-bg-white

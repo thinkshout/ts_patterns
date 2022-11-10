@@ -1,0 +1,36 @@
+
+{% set show_link = show_link ? show_link : (link_url ? 1 : 0)  %}
+{% set bg_color = "ts-bg-grey-100" %}
+{% set grid_class = "ts-grid-col-3" %}
+{% set header = header %}
+{% set text = text %}
+
+{% if my_attributes is empty %}
+  {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
+{% endif %}
+
+{% set classes = [
+  block_class,
+  bg_color,
+  'ts-reveal',
+  'ts-friendly',
+] %}
+
+<div {{ my_attributes.addClass(classes) }}>
+  <div class="lg:container p-site">
+    <div class="py-2xl">
+      <div class="w-2/3">
+        {% include "@ts_patterns/assets/blocks/section-title/section-title.html.twig" with {
+          header:header,
+          text:header
+        } %}
+      </div>
+      <div class="{{ grid_class }}">
+        {{ pattern_preview('cards', 'card-md') }}
+        {{ pattern_preview('cards', 'card-md') }}
+        {{ pattern_preview('cards', 'card-md') }}
+        {{ pattern_preview('cards', 'card-md') }}
+      </div>
+    </div>
+  </div>
+</div>
