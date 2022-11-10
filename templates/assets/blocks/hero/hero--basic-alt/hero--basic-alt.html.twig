@@ -14,7 +14,9 @@
 {% set breadcrumb = breadcrumb %}
 {% set header = header %}
 {% set tag = tag %}
-{% set ts_bg_color = 'ts-bg-grey-300' %}
+{% set ts_bg_color = 'ts-bg-grey-100' %}
+{% set back_link_url = "/" %}
+{% set back_link_text = "Back to Learn"|t %}
 
 {% set classes = [
   'hero--basic-alt-'~ pgType,
@@ -28,11 +30,11 @@
       {# Main Column #}
       <div>
         {% include "@ts_patterns/assets/btns/btn-back/btn-back.html.twig" with {
-          back_link_url:back_link_url,
-          back_link_text: "Back to Learn"|t
+          link_url: back_link_url,
+          link_text: back_link_text
         } %}
-        <h1 class="h1 mb-lg text-high-contrast">{{ header }}</h1>
-        <div class="h6 mb-sm text-med-contrast ">{{ tag }}</div>
+        <h1 class="h2 mb-0 text-high-contrast">{{ header }}</h1>
+        <div class="h6 mb-sm text-accent">{{ tag }}</div>
       </div>
     </div>
     <div> {# Right Column #}

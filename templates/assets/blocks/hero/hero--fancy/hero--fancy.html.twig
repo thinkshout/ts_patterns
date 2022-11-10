@@ -30,17 +30,17 @@
 %}
 
 <div{{ attributes.addClass( classes ) }}>
-  <div class="p-site py-lg xl:container">
-    <div class="w-2/3 xl:w-1/2 text-high-contrast">
+  <div class="p-site xl:container">
+    <div class="py-md md:py-2xl w-2/3 xl:w-1/2">
       {# Main Column #}
       <div>
-        <div class="text-md-contrast h4 mb-sm">{{ tag }}</div>
-        <h1 class="h1 mb-lg">{{ header }}</h1>
-        <div class="body">{{ text }}</div>
+        <div class="h4 mb-xs md:mb-sm text-accent">{{ tag }}</div>
+        <h1 class="h1 mb-xs text-high-contrast">{{ header }}</h1>
+        <div class="body mb-base text-md-contrast">{{ text }}</div>
         {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
           link_text: link_text,
           link_url: link_url,
-          link_classes: 'inline-block mr-sm'
+          link_classes: 'inline-block mb-base mr-base'
         } %}
         {% include "@ts_patterns/assets/btns/btn-primary/btn-primary.html.twig" with {
           link_text_2: link_text_2,

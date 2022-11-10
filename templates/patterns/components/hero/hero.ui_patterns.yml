@@ -4,7 +4,7 @@ hero:
   variants:
     hero--basic:
       label: Basic
-      description: breadcrumb, h1, configurable color, svg
+      description: breadcrumb, h1, configurable color, svg. Text colors = text-high-contrast, text-md-contrast,text-action, text-accent
     hero--fancy:
       label: Fancy
       description: breadcrumb, h1, text, up to 2 buttons, configurable color, svg
@@ -19,7 +19,7 @@ hero:
       type: text
       label: Header
       description: breadcrumb
-      preview: Home/Learn
+      preview: Home  /  Learn
     tag:
       type: text
       label: Tag
@@ -54,4 +54,4 @@ hero:
     ts_bg_color:
       type: select
       label: Background color
-      preview: ts-bg-grey-800
+      preview: ts-bg-blue-400

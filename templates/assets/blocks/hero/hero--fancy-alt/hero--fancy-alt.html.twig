@@ -17,30 +17,29 @@
 {% set header = header %}
 {% set img = img %}
 {% set text = text %}
-{% set link_text = link_text %}
-{% set link_url = link_url %}
-{% set link_text_2 = link_text_2 %}
-{% set link_url_2 = link_url_2 %}
-{% set ts_bg_color = ts_bg_color %}
+{% set back_link_text = link_text ? "Back to Learn"|t : "Back to Learn"|t %}
+{% set back_link_url = link_url %}
+{% set ts_bg_color = ts_bg_color ? "ts-bg-blue-900" : "ts-bg-blue-900" %}
 
 {% set classes = [
-  'hero--fancy-alt'~ pgType,
+  'hero--fancy-alt',
   ts_bg_color,
 ]
 %}
 
 <div{{ attributes.addClass( classes ) }}>
-  <div class="p-site py-lg xl:container">
-    <div class="w-2/3 xl:w-1/2">
+  <div class="p-site xl:container">
+    <div class="py-base md:py-xl w-2/3 xl:w-1/2">
       {# Main Column #}
       <div>
         {% include "@ts_patterns/assets/btns/btn-back/btn-back.html.twig" with {
-          back_link_url:back_link_url,
-          back_link_text: "Back to Learn"|t
+          link_url:back_link_url,
+          link_text: "Back to Learn"|t,
+          link_classes: "block mb-sm"
         } %}
-        <h1 class="h3 mb-lg text-high-contrast">{{ header }}</h1>
-        <div class="body text-md-contrast">{{ text }}</div>
-        <div class="h6 mb-sm text-accent">{{ tag }}</div>
+        <h1 class="h3 mb-base md:mb-lg text-high-contrast">{{ header }}</h1>
+        <div class="hidden md:block body mb-sm text-md-contrast">{{ text }}</div>
+        <div class="h6 mb-0 text-accent">{{ tag }}</div>
       </div>
     </div>
   {# @TODO: add image #}

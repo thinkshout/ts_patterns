@@ -1,0 +1,51 @@
+poster:
+  label: Poster
+  description: Appears at the bottom of the page. Can have dk or lt background, left or right aligned image,inset styles
+  variants:
+    poster--left:
+      label: Image left
+      description: Text colors = text-high-contrast,text-action, text-accent
+  fields:
+    tag:
+      type: text
+      label: Tag
+      description: Title string, goes immediately before or after header (h1).
+      preview: Pre-heading H6
+    header:
+      type: text
+      label: Header
+      description: Title string
+      preview: Header H2
+    text:
+      type: text
+      label: Text
+      description: Short text.
+      preview: Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis elit non odio consectetur in massa.
+    link_url:
+      type: text
+      label: Link URL
+      preview: https://thinkshout.com
+    link_text:
+      type: text
+      label: Link text
+      preview: Link one
+    link_url_2:
+      type: text
+      label: Link URL
+      preview: https://thinkshout.com
+    link_text_2:
+      type: text
+      label: Link text
+      preview: Link two
+    ts_bg_color:
+      type: select
+      label: Background color
+      preview: ts-bg-white
+    align-image:
+      type: select
+      label: Align image
+      preview: align-right
+    inset:
+      type: checkbox
+      label: Inset style
+      preview: false

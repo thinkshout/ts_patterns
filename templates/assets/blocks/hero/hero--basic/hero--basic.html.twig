@@ -24,10 +24,15 @@
 %}
 
 <div{{ attributes.addClass( classes ) }}>
-  <div class="p-site py-lg xl:container">
-    <div class="w-2/3 xl:w-1/2">
-      <div class="h6 mb-sm text-md-contrast">{{ breadcrumb }}</div>
-      <h1 class="h1 mb-lg text-high-contrast">{{ header }}</h1>
+  <div class="p-site xl:container">
+    <div class="pt-2xl pb-md md:py-2xl w-2/3 xl:w-1/2">
+      <div class="hidden md:block h6 mb-sm text-md-contrast uppercase">{{ breadcrumb }}</div>
+      {% include "@ts_patterns/assets/btns/btn-wayfinding/btn-wayfinding.html.twig" with {
+        link_text: "Back to Learn"|t,
+        link_url: "/",
+        link_classes: "mb-2xl md:hidden text-action"
+      } %}
+      <h1 class="h1 mb-0 text-high-contrast">{{ header }}</h1>
     </div>
   </div>
 </div>
