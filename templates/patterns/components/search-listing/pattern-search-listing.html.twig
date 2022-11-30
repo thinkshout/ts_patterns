@@ -1,0 +1,12 @@
+{% set header = header %}
+{% set ts_bg_color = ts_bg_color %}
+
+{% include '@ts_patterns/assets/blocks/search-listing/search-listing.html.twig' with {
+    header:header,
+    ts_bg_color:ts_bg_color,
+} %}
+
+<a href="https://github.com/thinkshout/ts_patterns/tree/main/templates/assets/blocks/search-listing"
+   class="btn--copy-template mt-lg" target="_blank">
+    {% trans %}Get the code for Search Listing{% endtrans %}
+</a>

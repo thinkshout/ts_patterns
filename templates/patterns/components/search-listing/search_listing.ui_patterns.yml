@@ -1,0 +1,17 @@
+search_listing:
+  label: Search Listing
+  description: Layout for content as displayed in a search listing.
+  variants:
+    search_listing:
+      label: Default
+      description: h1, background color
+  fields:
+    header:
+      type: text
+      label: Header
+      description: Title string
+      preview: Hero header
+    ts_bg_color:
+      type: select
+      label: Background color
+      preview: ts-bg-blue-400

@@ -1,0 +1,17 @@
+member_logos:
+  label: Member Logos
+  description: Layout for member logo blocks.
+  variants:
+    :
+      label: Default
+      description: h1, background color
+  fields:
+    header:
+      type: text
+      label: Header
+      description: Title string
+      preview: Hero header
+    ts_bg_color:
+      type: select
+      label: Background color
+      preview: ts-bg-blue-400

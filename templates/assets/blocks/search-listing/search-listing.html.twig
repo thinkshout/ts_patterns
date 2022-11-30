@@ -1,0 +1,23 @@
+{% set ts_bg_color = "ts-bg-grey-100" %}
+{% set header = header %}
+
+{% if my_attributes is empty %}
+    {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
+{% endif %}
+
+{% set classes = [
+    block_class,
+    bg_color,
+    'ts-reveal',
+    'ts-friendly',
+] %}
+
+<div {{ my_attributes.addClass(classes) }}>
+    <div class="lg:container p-site">
+        <div class="py-2xl">
+            <div class="{{ grid_class }}">
+                TEST
+            </div>
+        </div>
+    </div>
+</div>
